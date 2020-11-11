@@ -38,3 +38,14 @@ curl -L matmoul.github.io/archfi > archfi
 launch the script:
 
 sh archfi
+
+**************************************************************************************
+ATTENZIONE!!!
+Arch User Repository
+Install a pacman wrapper for AUR support, for example trizen, yay,ecc.:
+
+$ sudo pacman -S git
+$ cd /tmp
+$ git clone https://aur.archlinux.org/trizen.git
+$ cd trizen
+$ makepkg -si
