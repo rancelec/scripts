@@ -1,0 +1,99 @@
+RIMUOVERE aspell-en hunspell-en hyphen-en mythes-en gimp-help-en
+RIMUOVERE(pacchetti presenti nei gruppi "gnome" e "gnome-extras") accerciser epiphany evolution gnome-books gnome-boxes gnome-builder gnome-clocks gnome-code-assistance gnome-devel-docs gnome-dictionary gnome-documents gnome-getting-started-docs gnome-multi-writer gnome-music gnome-photos gnome-recipes gnome-software mousetweaks orca simple-scan sushi sysprof vino
+
+aspell-it mythes-it hunspell-it hyphen-it
+
+jre-openjdk jre-openjdk-headless jdk-openjdk openjdk-doc icedtea-web icedtea-web-doc
+
+yay(AUR)
+oppure:
+trizen(AUR)
+oppure:
+pakku(AUR)
+oppure:
+pikaur(AUR)
+oppure:
+pacaur(AUR)
+
+pacmanlogviewer pacman-contrib flashplugin pepper-flash gnome-disk-utility dconf-editor ufw ufw-extras gufw lm_sensors hardinfo xclip dmidecode hddtemp systemd-ui reflector wget axel curl httpie yelp chrome-gnome-shell gucharmap zenity gawk gnome-usage dialog alacarte unoconv lsb-release bash-completion lsof nano
+pamac-aur(AUR)
+pkgbrowser(AUR)
+inxi(AUR)
+yad(AUR)
+man-pages-it(AUR)
+nautilus-admin(AUR)
+gksu(AUR)
+downgrade(AUR)
+mintstick(AUR)
+aur-talk-git(AUR)
+woof(AUR)
+
+ttf-bitstream-vera cantarell-fonts xorg-fonts-type1 ttf-ubuntu-font-family ttf-droid
+arc-gtk-theme arc-icon-theme
+ttf-ms-fonts(AUR)
+ttf-tahoma(AUR)
+numix-frost-themes(AUR)
+numix-icon-theme-pack-git(AUR)
+sardi-icons(AUR)
+moka-icon-theme-git(AUR)
+gnome-shell-extension-dash-to-dock(AUR)
+gnome-shell-extension-coverflow-alt-tab(AUR)
+gnome-shell-extension-impatience-git(AUR)
+
+gparted xfsprogs reiserfsprogs progsreiserfs jfsutils ntfs-3g dosfstools gpart dmraid libgpod exfat-utils f2fs-tools usbmuxd libimobiledevice mtools lvm2
+ifuse(AUR)
+
+brasero libburn libisofs bchunk ccd2iso mdf2iso nrg2iso cdrdao bin2iso
+
+file-roller unace unrar zip unzip p7zip lzip lzop cpio sharutils uudeview cabextract ecm-tools
+
+base-devel geany geany-plugins meld devhelp code glade atom notepadqq
+
+ruby rubygems ruby-docs ruby-rdoc ruby-sqlite3 sqlite sqlite-doc sqlite-analyzer sqlitebrowser python python2 ipython ipython2 python-docs python2-docs python-lxml python-lxml-docs gdb perl gambas3 fpc fpc-src vala
+python2-pysqlite(AUR)
+javasqlite(AUR) oppure xerial-sqlite-jdbc(AUR)
+python2-bs4(AUR)
+bash-docs(AUR)
+sqliteman(AUR)
+perl-docs(AUR)
+
+ffmpeg ffmpeg2theora ffmpegthumbnailer flac faac faad2 sox libsoxr gpac mac libmpeg2 mpg123 vorbis-tools libvorbis id3v2 lame libjpeg-turbo libquicktime mp3wrap transcode a52dec jasper libdca libdv libmad libtheora libxv wavpack mjpegtools libdvdcss libdvdread libdvdnav x264 x265 xvidcore libcue cuetools chromaprint mencoder vorbisgain wavegain opus-tools opusfile libde265 gstreamer-vaapi gstreamer gst-plugins-base gst-plugins-base-libs gst-plugins-bad gst-plugins-good gst-plugins-ugly gst-editing-services gst-python gst-libav gst-transcoder shntool mp3splt youtube-dl
+mp3gain(AUR)
+flacgain(AUR)
+ttaenc(AUR)
+aacgain-cvs(AUR)
+cutmp3(AUR)
+
+gstreamer0.10-base(AUR)
+gstreamer0.10-base-plugins(AUR)
+gstreamer0.10-ffmpeg(AUR)
+gstreamer0.10-fluendo(AUR)
+gstreamer0.10-fluendo-mp3(AUR)
+gstreamer0.10-gnonlin(AUR)
+gstreamer0.10-bad(AUR)
+gstreamer0.10-bad-plugins(AUR)
+gstreamer0.10-good(AUR)
+gstreamer0.10-good-plugins(AUR)
+gstreamer0.10-ugly(AUR)
+gstreamer0.10-ugly-plugins(AUR)
+gstreamer0.10-vaapi(AUR)
+gstreamer0.10-python(AUR)
+
+seahorse gedit-plugins eog-plugins gnome-mplayer vlc calibre sigil audacious audacious-plugins rhythmbox clipgrab xchm imagemagick imagemagick-doc viewnior gnome-nettool polari mediainfo mediainfo-gui mp3splt-gtk deluge-gtk gthumb shotwell soundconverter pdfmod pdfmixtool filezilla guvcview converseen pidgin hexchat ciano gnome-notes ghex foliate gprename keepassxc
+pinta(AUR)
+pidgin-extprefs(AUR)
+xnconvert(AUR)
+cherrytree(AUR)
+gcue2tracks(AUR)
+tagtool(AUR)
+freefilesync(AUR)
+flacon(AUR)
+youtube-dl-gui-git(AUR)
+vidcutter(AUR)
+dupeguru(AUR)
+ffmulticonverter(AUR)
+gradio(AUR)
+DRE(SRC)
+
+aisleriot gnome-chess gnuchess five-or-more four-in-a-row hitori iagno gnome-klotski lightsoff gnome-mahjongg gnome-mines gnome-nibbles quadrapassel gnome-robots gnome-sudoku swell-foop tali gnome-tetravex gnome-2048 gnome-taquin pysolfc pysolfc-cardsets
+

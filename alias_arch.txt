@@ -1,0 +1,273 @@
+### ALIAS ###
+# elenco degli alias
+alias elenco_alias='nano ~/.bash_aliases'
+# ricarica configurazione shell (alias, ecc.)
+alias ricarica='source ~/.bashrc'
+# arresta correttamente il sistema
+alias arresta='sudo shutdown -h now'
+# riavvia correttamente il sistema
+alias riavvia='sudo shutdown -r now'
+
+# --- per ArchLinux
+# sceglie i mirror aggiornati nelle ultime 8 ore,
+# fra questi i 128 più veloci,
+# fra questi i 64 aggiornati più recentemente,
+# fra questi i 32 migliori,
+# li ordina per velocità
+# e li aggiorna (richiede reflector)
+alias mirror='sudo reflector --age 8 --fastest 128 --latest 64 --number 32 --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syy'
+
+# --- per Manjaro
+# sceglie automaticamente i server mirror disponibili e aggiornati
+# e di conseguenza aggiorna il file /etc/pacman.d/mirrorlist
+# posizionandoli in ordine dal più veloce al più lento
+#alias mirror='sudo pacman-mirrors --fasttrack && sudo pacman -Syyu'
+
+# aggiorna indici dei pacchetti
+alias aggiorna_repository='sudo pacman -Syy'
+# aggiorna indici dei pacchetti e pacchetti
+alias aggiornamento='sudo pacman -Syyu'
+# aggiorna includendo anche i pacchetti installati da AUR
+alias aggiornamento_completo='yay -Syu'
+
+# installa un pacchetto
+alias installa='sudo pacman -S'
+# installa un pacchetto precedentemente scaricato <pacchetto.pkg.tar.xz>
+alias installa_pacchetto='sudo pacman -U'
+# rimuovi un pacchetto e le sue dipendenze
+alias rimuovi='sudo pacman -Rs'
+
+# elenca pacchetti non più necessari come dipendenze (orfani)
+alias elenco_orfani='pacman -Qdtq'
+# pulizia pacchetti inutilizzati
+alias pulizia_orfani='sudo pacman -R $(pacman -Qtdq)'
+# svuota cache pacchetti disinstallati
+alias pulizia_cache='sudo paccache -rvu'
+# rimuove vecchie versioni dei programmi a parte la penultima
+alias pulizia_vecchie='sudo paccache -rv -k 1'
+# rimuove tutte le vecchie versioni
+alias pulizia_vecchie_tutte='sudo paccache -rv -k 0'
+
+# informazioni su un pacchetto
+alias info_pacchetto='pacman -Si'
+# informazioni su un pacchetto installato
+alias info_pacchetto_installato='pacman -Qs'
+# cerca nei repository un pacchetto
+alias cerca_pacchetto='pacman -Ss'
+# mostra se un pacchetto è installato o no
+alias installato='pacman -Qs'
+# elenco pacchetti installati da AUR
+alias elenco_aur='pacman -Qm'
+# cerca un pacchetto che contiene un file specifico
+alias cerca_specifico='sudo pacman -Fy && pacman -Fs'
+# commenti su un pacchetto AUR (richiede aur-talk-git)
+alias commenti='aur-talk -l'
+# elenca i pacchetti installati da AUR
+alias elenco_aur='yay -Qm'
+
+#sblocca pacman
+alias sblocca='sudo rm /var/lib/pacman/db.lck'
+
+# installa un flatpak
+#alias flatpak_installa='flatpak install'
+# rimuovi un flatpak
+#alias flatpak_rimuovi='flatpak uninstall'
+# aggiorna i pacchetti flatpak
+#alias flatpak_aggiornamento='flatpak update'
+# elenca i flatpak installati
+#alias flatpak_elenca='flatpak list'
+# informazioni su di un flatpak
+#alias flatpak_info='flatpak info'
+
+# aggiornamento GRUB
+alias aggiorna_grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+# ricontrollo hd al boot
+alias ricontrollo='sudo touch /forcefsck && sudo reboot'
+# aggiorna la data e l'ora del sistema
+alias aggiorna_tempo='sudo ntpdate it.pool.ntp.org'
+# informazioni generiche (richiede inxi)
+alias informazioni='uname -a  && inxi -Fxz'
+# svuota_cestino
+alias cestino='sudo rm -rf ~/.local/share/Trash/files/ && sudo rm -rf ~/.local/share/Trash/info/'
+# restituisce uuid delle partizioni
+alias uuid='lsblk -f'
+# restituisce lo stato della memoria RAM e SWAP
+alias memoria='free -mt'
+# restituisce valore swap
+alias valore_swap='sudo cat /proc/sys/vm/swappiness'
+# panoramica della RAM e della swap
+alias memoria='free --human'
+# verifica stato del firewall
+alias firewall='sudo ufw status verbose'
+# ricarica la cache dei font
+alias ricarica_caratteri='sudo fc-cache -fv'
+# quale display server si sta usando
+alias display='echo $XDG_SESSION_TYPE'
+# elenco delle partizioni
+alias partizioni='lsblk --output NAME,SIZE,TYPE,MOUNTPOINT'
+
+# ping
+alias ping='ping -c 5'
+# trasferisce un file ad un altro pc tramite il mini-webserver woof (richiede woof)
+alias woof='woof -p 8080'
+# scarica con axel (richiede axel)(esclude quello sotto)
+alias scarica='axel -av'
+# scarica con httpie (richiede httpie)(esclude quello sopra)
+#alias scarica='http --download'
+# scarica video da youtube e lo converte in mp4 (richiede youtube-dl)
+alias scarica_video_mp4='youtube-dl --restrict-filenames --recode-video mp4'
+# scarica video da youtube e lo converte nel miglior formato disponibile (richiede youtube-dl)
+alias scarica_video_best='youtube-dl --restrict-filenames -f bestvideo+bestaudio'
+# scarica video da youtube e estrae audio in mp3 (richiede youtube-dl)
+alias scarica_video_mp3='youtube-dl --restrict-filenames --extract-audio --audio-format mp3'
+# converte un file da Python2 a Python3
+alias 2to3='2to3 -f all -f idioms -f buffer -f set_literal -f ws_comma -w'
+# Elenca tutti i gruppi e i nomi utente presenti in ciascun gruppo
+alias utenti_gruppi='for u in `cut -f1 -d: /etc/passwd`; do echo -n $u:; groups $u; done | sort'
+
+#solo per Cinnamon
+#alias versione_cinnamon='cinnamon --version'
+#solo per Gnome-Shell
+#alias versione_gnomeshell='gnome-shell --version'
+#solo per KDE
+#alias versione_kde='kded4 --version'
+#solo Unity
+#alias versione_unity='unity --version'
+#solo XFCE
+#alias versione_xfce='xfce4-session --version'
+#solo Mate
+#alias versione_mate='mate-session --version'
+
+### FUNZIONI ###
+# localizza un programma, le sue icone e le sue immagini
+function localizza()
+{
+    locate $1 | grep icon | grep .png ;
+}
+
+# controlla se IPv6 è attivo o no
+function controlla_ipv6()
+{
+    echo "Ritorna 0 se IPv6 attivo, 1 se disattivo"
+    echo
+    cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+}
+
+# rinfresca database e trova un file
+function trova()
+{
+    sudo updatedb ;
+    locate $1 | more ;
+}
+
+# crea directory
+function crea_directory()
+{
+    echo -n "Esegui da amministratore (s/n)?"
+    read risposta
+    if [[ $risposta = "s" ]] ; then
+		sudo mkdir --verbose $1
+	else
+		if [[ $risposta = "n" ]] ; then
+			mkdir --verbose $1
+		else
+			echo "Nulla di fatto."
+		fi
+	fi
+}
+
+# rimuove directory ricorsivamente
+function rimuovi_directory()
+{
+    echo -n "Esegui da amministratore (s/n)?"
+    read risposta
+    if [[ $risposta = "s" ]] ; then
+		sudo rm --recursive --verbose $1
+	else
+		if [[ $risposta = "n" ]] ; then
+			rm --recursive --verbose $1
+		else
+			echo "Nulla di fatto."
+		fi
+	fi
+}
+
+# rimuove file
+function rimuovi_file()
+{
+    echo -n "Esegui da amministratore (s/n)?"
+    read risposta
+    if [[ $risposta = "s" ]] ; then
+		sudo rm --verbose $1
+	else
+		if [[ $risposta = "n" ]] ; then
+			rm --verbose $1
+		else
+			echo "Nulla di fatto."
+		fi
+	fi
+}
+
+# controlla l'esistenza della swap
+function controlla_swap()
+{
+    sudo fdisk -l | grep -i swap
+    free | grep -i swap
+}
+
+# visualizza dimensione cache della home
+# ed eventualmente la cancella
+function pulizia_cache_home()
+{
+	echo "La tua cartella ~/.cache/ ha le seguenti dimensioni: "
+	sudo du -sh ~/.cache/
+	echo -n "Vuoi cancellarla (s/n)?"
+    read risposta
+    if [[ $risposta = "s" ]] ; then
+		rm -rf ~/.cache/*
+	else
+		echo "Nulla di fatto."
+	fi
+}
+
+# estrae per varie estensioni
+function estrai()
+{
+    nome=$1
+    case $nome in
+		*.tar.bz) tar xvjf $nome;;
+        *.tar.gz) tar xvzf $nome;;
+        *.tar.xz) tar xvJf $nome;;
+		*.lzma) unlzma $nome;;
+        *.bz2) bunzip2 $nome;;
+		*.rar) unrar x -ad $nome;;
+        *.gz) gunzip $nome;;
+        *.tar) tar xvf  $nome;;
+		*.tbz2) tar xvjf $nome;;
+		*.tgz) tar xvzf $nome;;
+        *.zip) unzip $nome;;
+		*.Z) uncompress $nome;;
+		*.7z) 7z x $nome;;
+		*.xz) unxz $nome;;
+		*.exe) cabextract $nome;;
+        *) echo "File sconosciuto";;
+    esac
+}
+
+# genera un nome casuale di N caratteri alfanumerici e lo memorizza nella clipboard
+# dare il comando: nome_casuale N (dove N è il numero di caratteri che si vuole generare) (richiede xclip)
+function nome_casuale()
+{
+    numero=$1
+    cat /dev/urandom | tr -dc 'a-z0-9' | fold -w $numero | head -n 1 | xclip -selection clipboard
+}
+
+# genera un numero casuale fra 1 e N
+# dare il comando: numero_casuale N (dove N è il numero massimo che si vuole generare)
+function numero_casuale()
+{
+    numero=$1
+    echo $[RANDOM % $numero + 1]
+}
+
