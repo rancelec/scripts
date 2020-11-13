@@ -37,16 +37,19 @@ launch the script:
 sh archfi
 
 **************************************************************************************
-ARCH LINUX INSTALL SCRIPT (https://github.com/picodotdev/alis)
-curl https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash
+INSTALLARE UN AUR HELPER SENZA AUR
+installare git, se non già presente:
 
-or with URL shortener:
+sudo pacman -S git
 
-curl -sL https://bit.ly/2F3CATp | bash
+clonare yay:
 
-Edit alis.conf and change variables values with your preferences, then:
+git clone https://aur.archlinux.org/yay.git
 
-./alis.sh
+entrare nella cartella creata:
 
-Warning! This script deletes all partitions of the persistent storage!!!
+cd yay
 
+procedere con l'isntallazione:
+
+makepkg -si
