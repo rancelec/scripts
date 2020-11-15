@@ -9,13 +9,13 @@ yay(AUR)
 oppure:
 trizen(AUR)
 oppure:
-pakku(AUR)
-oppure:
 pikaur(AUR)
 oppure:
 pacaur(AUR)
+oppure:
+pakku(AUR)
 
-pacmanlogviewer pacman-contrib flashplugin pepper-flash gnome-disk-utility dconf-editor ufw ufw-extras gufw lm_sensors hardinfo xclip dmidecode hddtemp systemd-ui reflector wget axel curl httpie yelp chrome-gnome-shell gucharmap zenity gawk gnome-usage dialog alacarte unoconv lsb-release bash-completion lsof nano
+pacmanlogviewer pacman-contrib flashplugin pepper-flash gnome-disk-utility dconf-editor ufw ufw-extras gufw lm_sensors hardinfo xclip dmidecode hddtemp systemd-ui reflector wget axel curl httpie yelp chrome-gnome-shell gucharmap zenity gawk gnome-usage dialog alacarte unoconv lsb-release bash-completion lsof nano bluez bluez-utils
 pamac-aur(AUR)
 pkgbrowser(AUR)
 inxi(AUR)
@@ -96,4 +96,3 @@ gradio(AUR)
 DRE(SRC)
 
 aisleriot gnome-chess gnuchess five-or-more four-in-a-row hitori iagno gnome-klotski lightsoff gnome-mahjongg gnome-mines gnome-nibbles quadrapassel gnome-robots gnome-sudoku swell-foop tali gnome-tetravex gnome-2048 gnome-taquin pysolfc pysolfc-cardsets
-
